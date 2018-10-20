@@ -1,0 +1,130 @@
+<!-- <a-plane
+  position="0 0 -5"
+  height="4"
+  src='./images/zombieMarker.png'
+  width="4">
+  <a-animation
+  attribute="width"
+  from="4"
+  to="1"
+  dur="1000"
+  repeat="indefinite"
+  direction="alternate"></a-animation>
+  <a-animation
+  attribute="height"
+  from="4"
+  to="1"
+  dur="1000"
+  repeat="indefinite"
+  direction="alternate"></a-animation>
+</a-plane> -->
+<!-- <a-sphere
+  position="0 0 -10"
+  rotation="0 -75 0"
+  radius='5'
+  src='./images/zombieMarker.png'>
+  <a-animation
+    attribute="position"
+    from="0 0 -10"
+    to="0 0 -6"
+    dur="1000"
+    repeat="indefinite"
+    direction="alternate"
+  ></a-animation>
+</a-sphere> -->
+<!--
+<a-portal-door
+  id='door'
+  url='images/fleshwall.jpg'
+  position='1 0 -2'
+  scale='2 1 2'
+  rotation='0 0 0'
+>
+</a-portal-door>
+<a-entity
+position="1 0.25 -2"
+rotation="45 0 0"
+animation-mixer="clip:*;"
+gltf-model="#worm-obj"></a-entity> -->
+
+
+<!-- <a-entity
+  id="worm"
+  mixin="worm"
+>
+<a-animation
+  attribute="rotation"
+  dur="750"
+  from="-20 -5 5"
+  to="20 5 -5"
+  autoplay="true"
+  repeat="indefinite"
+  easing="ease-in-out-cubic"
+>
+</a-entity> -->
+<!-- <a-scene animation-timeline__1="timeline: #shiptl; loop: true">
+  <a-assets timeout="10000">
+    <a-asset-item id="seamonster-obj" src="./objects/seamonster.obj"></a-asset-item>
+    <a-asset-item id="seamonster-mtl" src="/objects/seamonster.mtl"></a-asset-item>
+    <a-asset-item id="ship-obj" src="./objects/ship.obj"></a-asset-item>
+    <a-asset-item id="ship-mtl" src="/objects/ship.mtl"></a-asset-item>
+    <img id="space" src="./images/space.jpg">
+    <a-timeline id="shiptl">
+      <a-timeline-group offset='100'>
+        <a-timeline-animation select="#ship1" name="positionone"></a-timeline-animation>
+        <a-timeline-animation select="#monster1" name="monsterpositionone"></a-timeline-animation>
+        <a-timeline-animation select="#ship1" name="positiontwo"></a-timeline-animation>
+      </a-timeline-group>
+    </a-timeline>
+    <a-mixin id="ship"
+      animation__positionone="property: position; dur: 5000; fill: forward; to: 0 0.5 -3; from: 10 0.5 -3; autoplay: true"
+      animation__positiontwo="property: position; delay: 5000; dur: 5000; fill: forward; to: -10 0.5 -3; from: 0 0.5 -3; autoplay: true"
+      position="10 0.5 -3"
+      obj-model="obj: #ship-obj; mtl: #ship-mtl"
+      scale="0.75 0.75 0.75"
+    ></a-mixin>
+    <a-mixin id="monster"
+      animation__monsterpositionone="property: position; dur: 5000; fill: forward; to: 0 0 -8; from: 0 -10 -8; autoplay: true"
+      scale="5 5 5"
+      position="0 0 -5"
+      rotation="50 180 0"
+      obj-model="obj: #seamonster-obj; mtl: #seamonster-mtl"
+      scale="4 4 4"
+    ></a-mixin>
+  </a-assets>
+  <a-sky src="#space"></a-sky>
+  <a-entity
+    id="ship1"
+    mixin="ship"
+  >
+    <a-animation
+      attribute="rotation"
+      dur="750"
+      from="20 5 -5"
+      to="-20 -5 5"
+      autoplay="true"
+      repeat="indefinite"
+      direction="alternate-reverse"
+      easing="ease-in-out-cubic"
+    >
+    <a-animation>
+  </a-entity>
+  <a-entity
+    id="seamonster1"
+    mixin="monster"
+  >
+  </a-entity>
+  <a-ocean  width="50" depth="50" density="50" speed="20">
+  </a-ocean>
+</a-scene> -->
+<!-- ambientOcclusionMap="./AlienInsect_Textures\\Textures\\AlienInsect_AO.png" -->
+<!-- displacementMap="./AlienInsect_Textures\\Textures\\AlienInsect_DM.png" -->
+<!-- Ka 1.000000 1.000000 1.000000 -->
+<!-- Kd 0.800000 0.800000 0.800000 -->
+<!-- Ks 0.000000 0.000000 0.000000 -->
+<!-- Ke 0.000000 0.000000 0.000000 -->
+<a-entity
+position="1 0.25 -2"
+rotation="45 0 0"
+animation-mixer="clip:*;"
+gltf-model="#worm-obj"></a-entity>

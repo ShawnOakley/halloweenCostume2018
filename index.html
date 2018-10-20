@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- animation__waveone="property: rotation; delay: 75 dur: 2000; fill: forward; from: 0 0 0; to:  -30 0 0; autoplay: true; repeat: indefinite" -->
+<!-- animation__wavetwo="property: rotation; delay: 2075; dur: 2000; fill: forward; from: -30 0 0 ; to: 30 0 0 ;  autoplay: true; repeat: indefinite" -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Chestburster</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script type="application/javascript" src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/ngokevin/kframe/master/components/animation/dist/aframe-animation-component.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/jeromeetienne/AR.js/master/three.js/build/ar.min.js"></script>
+    <script type="text/javascript" src='src/threex-portal-door.js'></script>
+    <script type="text/javascript" src='src/aframe-portal-door.js'></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item
+          src="./objects/AlienInsect_Blend2.gltf"
+          id="worm-obj"
+        />
+        <img id='marker' src='./images/zombieMarker.png' />
+
+      </a-assets>
+      <a-sphere
+        position="0 2 -6"
+        radius='0'
+        color='green'>
+        <a-animation
+          attribute="radius"
+          from="0"
+          to="2.025"
+          dur="2000"
+          autoplay="true"
+          repeat="indefinite"
+          direction="alternate"
+          easing="ease-in-out-cubic"
+        ></a-animation>
+      </a-sphere>
+      <a-sphere
+        position="0 -2 -6"
+        radius='0'
+        color='green'>
+        <a-animation
+          attribute="radius"
+          from="0"
+          to="2.025"
+          dur="2000"
+          autoplay="true"
+          repeat="indefinite"
+          direction="alternate"
+          easing="ease-in-out-cubic"
+        ></a-animation>
+      </a-sphere>
+      <a-curvedimage
+      src='./images/zombieMarker.png'
+      height='4'
+      width='4'
+      rotation= '0 260 0'
+      radius='3'
+      scale='1 1 1'
+      position="0 0 -6"
+      theta-length='200'
+      >
+      <a-animation
+        attribute="radius"
+        dur="2000"
+        from="1"
+        to="2"
+        autoplay="true"
+        repeat="indefinite"
+        direction="alternate"
+        easing="ease-in-out-cubic"
+      >
+      </a-animation>
+      </a-curvedimage>
+      <a-image
+      src='./images/zombieMarker.png'
+      width='4'
+      height='4'
+      rotation='0 180 0'
+
+      position="0 0 -5"
+      ></a-image>
+    </a-scene>
+  </body>
+</html>
