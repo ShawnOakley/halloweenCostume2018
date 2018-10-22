@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- animation__waveone="property: rotation; delay: 75 dur: 2000; fill: forward; from: 0 0 0; to:  -30 0 0; autoplay: true; repeat: indefinite" -->
+<!-- animation__wavetwo="property: rotation; delay: 2075; dur: 2000; fill: forward; from: -30 0 0 ; to: 30 0 0 ;  autoplay: true; repeat: indefinite" -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Chestburster</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script type="application/javascript" src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/ngokevin/kframe/master/components/animation/dist/aframe-animation-component.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/jeromeetienne/AR.js/master/three.js/build/ar.min.js"></script>
+    <script type="text/javascript" src='src/threex-portal-door.js'></script>
+    <script type="text/javascript" src='src/aframe-portal-door.js'></script>
+
+  </head>
+  <body>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+      <a-assets>
+        <a-asset-item
+          src="./objects/AlienInsect_Blend2.gltf"
+          id="worm-obj"
+        />
+        <img id='marker' src='./images/zombieMarker.png' />
+        <img id='meat' src='./images/fleshwall.jpg'/>
+      </a-assets>
+
+      <a-marker preset='hiro' id='marker-hiro' registerevents>
+  			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
+  				<a-torus-knot radius='0.26' radius-tubular='0.05'>
+  					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+  				</a-torus-knot>
+  			</a-box>
+  		</a-marker>      
+      <!-- <a-entity position="0 -0.5 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
+        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="18000" to="false"></a-animation>
+      </a-entity>
+      <a-entity position="0 -1 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
+        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="15000" to="false"></a-animation>
+      </a-entity>
+      <a-entity position="0 1 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
+        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="15000" to="false"></a-animation>
+      </a-entity>
+
+      <a-sphere
+        position="0 2 -6"
+        radius='2'
+        color='green'>
+        <a-animation
+          attribute="radius"
+          from="1.25"
+          to="2"
+          dur="2000"
+          autoplay="true"
+          repeat="5"
+          direction="alternate"
+          easing="ease-in-out-cubic"
+        ></a-animation>
+        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+      </a-sphere>
+
+      <a-sphere
+        position="0 -2 -6"
+        radius='2'
+        color='green'>
+        <a-animation
+          attribute="radius"
+          from="1.25"
+          to="2"
+          dur="2000"
+          autoplay="true"
+          repeat="4"
+          direction="alternate"
+          easing="ease-in-out-cubic"
+        ></a-animation>
+        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+      </a-sphere>
+
+      <a-curvedimage
+      src='./images/zombieMarker.png'
+      height='4'
+      width='4'
+      rotation= '0 260 0'
+      radius='3'
+      scale='1 1 1'
+      position="0 0 -6"
+      theta-length='200'
+      >
+        <a-animation
+          attribute="radius"
+          dur="2000"
+          from="1.25"
+          to="2"
+          autoplay="true"
+          repeat="5"
+          direction="alternate"
+          easing="ease-in-out-cubic"
+        >
+        </a-animation>
+        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+      </a-curvedimage>
+
+      <a-image
+      src='./images/zombieMarker.png'
+      width='4'
+      height='4'
+      rotation='0 180 0'
+      position="0 0 -5"
+      >
+        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+
+      </a-image>
+
+      <a-portal-door
+        id='door'
+        url='images/fleshwall.jpg'
+        position='0 0 -2'
+        scale='2 1 1'
+        rotation='0 0 0'
+        visible='false'
+      >
+      <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+      </a-portal-door>
+      <a-entity
+      position="-0.2 1 -4"
+      rotation="90 0 0"
+      animation-mixer="clip:*;"
+      gltf-model="#worm-obj"
+      visible="false"
+      >
+      <a-animation attribute="visible" begin="10500" to="true"></a-animation>
+      <a-animation
+        attribute="position"
+        from="-0.2 1.5 -5"
+        to="-0.2 1.5 -2"
+        dur="5000"
+        autoplay="true"
+        repeat="0"
+        easing="ease-out"
+        begin="10500"
+      ></a-animation>
+      <a-animation
+        attribute="rotation"
+        from="90 0 0"
+        to="45 0 0"
+        dur="2000"
+        autoplay="true"
+        repeat="0"
+        easing="ease-out"
+        begin="14000"
+      ></a-animation>
+      </a-entity> -->
+    <!-- </a-marker> -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
