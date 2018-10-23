@@ -10,7 +10,9 @@
     <script type="application/javascript" src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script type="application/javascript" src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.min.js"></script>
     <script type="application/javascript" src="https://rawgit.com/ngokevin/kframe/master/components/animation/dist/aframe-animation-component.min.js"></script>
-    <script type="application/javascript" src="https://rawgit.com/jeromeetienne/AR.js/master/three.js/build/ar.min.js"></script>
+    <script type="application/javascript" src="https://rawgit.com/jeromeetienne/AR.js/57431cb6b7529fa5acb95d9adb89ad82ba7a768a/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
     <script type="text/javascript" src='src/threex-portal-door.js'></script>
     <script type="text/javascript" src='src/aframe-portal-door.js'></script>
 
@@ -26,25 +28,28 @@
         <img id='meat' src='./images/fleshwall.jpg'/>
       </a-assets>
 
-      <a-marker preset='hiro' id='marker-hiro' registerevents>
+      <!-- <a-marker preset='hiro' id='marker-hiro' registerevents>
   			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
   				<a-torus-knot radius='0.26' radius-tubular='0.05'>
   					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
   				</a-torus-knot>
   			</a-box>
-  		</a-marker>      
-      <!-- <a-entity position="0 -0.5 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
-        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-        <a-animation attribute="visible" begin="18000" to="false"></a-animation>
+  		</a-marker> -->
+<a-entity position="0 -0.5 -5" visible="true" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
+        <!-- <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="18000" to="false"></a-animation> -->
       </a-entity>
       <a-entity position="0 -1 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
-        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-        <a-animation attribute="visible" begin="15000" to="false"></a-animation>
+        <!-- <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="15000" to="false"></a-animation> -->
       </a-entity>
       <a-entity position="0 1 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
-        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-        <a-animation attribute="visible" begin="15000" to="false"></a-animation>
+        <!-- <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="visible" begin="15000" to="false"></a-animation> -->
       </a-entity>
+      <a-entity position="0 0 -5" visible="false" particle-system="randomize: true; type: 3; accelerationSpread: 0 0 0; accelerationValue: 10 -8 0; size: 0.66; opacity: 0.75; blending: 1; rotationAngle: 45;rotationAxis: z; color: #EF0000,#44CC00; texture: ./images/fleshwall.jpg; velocityValue: 0 0 5;">
+      </a-entity>
+
 
       <a-sphere
         position="0 2 -6"
@@ -153,9 +158,8 @@
         easing="ease-out"
         begin="14000"
       ></a-animation>
-      </a-entity> -->
-    <!-- </a-marker> -->
-      <a-entity camera></a-entity>
+      </a-entity>
+
     </a-scene>
   </body>
 </html>

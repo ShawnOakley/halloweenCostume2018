@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<script src="vendor/aframe/build/aframe.min.js"></script>
+<script type="application/javascript" src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 <!-- include aframe-ar.js -->
-<script src="../build/aframe-ar.js"></script>
+<script type="application/javascript" src="https://rawgit.com/jeromeetienne/AR.js/57431cb6b7529fa5acb95d9adb89ad82ba7a768a/aframe/build/aframe-ar.js"></script>
 <!-- Register an aframe component that allows reacting to marker events -->
 <script>
 	AFRAME.registerComponent('registerevents', {
@@ -26,7 +26,7 @@
 	<br/>
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 </div>
-	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene>
 		<!-- handle hiro marker -->
 		<!-- 'registerevents' will register event listeners for the marker when it is found and lost,
 		as defined in the inline script above -->
